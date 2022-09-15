@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MyFile {
+
 	public static int percentile(int[] inputArray, double rank) {
 		int arrayLength = inputArray.length;
 		double rankCalc = Math.round((rank / 100) * arrayLength);
@@ -54,7 +55,7 @@ public class MyFile {
 
 	public static void main(String[] args) throws IOException {
 
-		File file = new File("/home/neil/eclipse-workspace/HyperionDev3/src/input.txt");
+		File file = new File("input.txt");
 		String min = dataCals(file, 1, "min", 0);
 		String max = dataCals(file, 2, "max", 0);
 		String ave = dataCals(file, 3, "ave", 0);
@@ -64,7 +65,7 @@ public class MyFile {
 
 		try {
 			BufferedWriter fileOutPut = new BufferedWriter(
-					new FileWriter("/home/neil/eclipse-workspace/HyperionDev3/src/output.txt"));
+					new FileWriter("output.txt"));
 			fileOutPut.write("The​ ​ min​ ​ of​ ​ [1,​ ​ 2,​ ​ 3,​ ​ 5,​ ​ 6]​ ​ is " + min + "\n");
 			fileOutPut.write("The​ ​ max​ ​ of​ ​ [1,​ ​ 2,​ ​ 3,​ ​ 5,​ ​ 6]​ ​ is " + max + "\n");
 			fileOutPut.write("The​ ​ avg ​ of​ ​ [1,​ ​ 2,​ ​ 3,​ ​ 5,​ ​ 6]​ ​ is " + ave + "\n");
@@ -76,6 +77,5 @@ public class MyFile {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-
 	}
 }
